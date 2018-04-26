@@ -3,8 +3,6 @@
 #include <string.h>
 #include <ctype.h>
 
-
-
 int main(int argc, char ** argv) {
 
    if (argc != 2) {
@@ -30,8 +28,7 @@ int main(int argc, char ** argv) {
     int MAJOR_STEPS[6] = {2,2,1,2,2,2};
     int MINOR_STEPS[6] = {2,1,2,2,1,2};
     int NUMBER_OF_STEPS =  sizeof(MAJOR_STEPS)/ sizeof(MAJOR_STEPS[0]);
-
-
+   
     void printScale(int note_index, char type[], int steps[]) {
         printf("%s %s: %s ", KEY_NAMES[note_index], type, KEY_NAMES[note_index]);
         int offset = 0;
@@ -55,7 +52,6 @@ int main(int argc, char ** argv) {
             key_index = k;
             key_exists = 1;
         }
-
     }
 
     if (key_exists != 1) {
@@ -65,6 +61,6 @@ int main(int argc, char ** argv) {
 
     printScale(key_index, "major", MAJOR_STEPS);
     printScale(key_index, "minor", MINOR_STEPS);
-
+   
     return 0;
 }
