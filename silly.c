@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-
 char* silly(char* a, char* b) {
   int returnSize = 0;
   int firstSubStringSize = 0;
@@ -35,8 +34,7 @@ char* silly(char* a, char* b) {
           stringCounter++;
     }
   }
-
-
+  
   return toReturn;
 }
 
@@ -46,4 +44,5 @@ int main() {
   printf("%s \n", silly("abc", ""));
   printf("%s \n", silly("", "abc"));
   printf("%s \n", silly("too", "real"));
+  return 0;
 }
